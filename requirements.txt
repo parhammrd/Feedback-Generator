@@ -1,0 +1,6 @@
+google-genai
+fastapi>=0.115.0
+uvicorn[standard]
+python-dotenv
+motor
+pymongo
