@@ -28,6 +28,6 @@ async def gen_feedback(feedback: FeedbackRequest):
         response=response
     )
 
-    await db.insert_one(feedback_document.dict(by_alias=True))
+    await db["gemini_app"].insert_one(feedback_document.dict(by_alias=True))
 
     return {"response": response}

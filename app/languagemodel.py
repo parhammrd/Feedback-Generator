@@ -4,9 +4,7 @@ from google.genai.types import GenerateContentConfig, HttpOptions
 from app.settings import GEMINI_API_KEY, LLM_MODEL_NAME
 
 
-genai.configure(api_key=GEMINI_API_KEY)
-
-client = genai.Client(http_options=HttpOptions(api_version="v1"))
+client = genai.Client(api_key=GEMINI_API_KEY)
 
 async def generate_gemini_response(prompt_text: str):
     response = client.models.generate_content(

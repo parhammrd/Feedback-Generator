@@ -23,7 +23,7 @@ class StudentData(BaseModel):
         Question Level: {self.question_level}
         Time Spent: {self.time_spent}
         Attempts: {self.attempts}
-        Prior Performance: {self.prior_performance}"""
+        Prior level performance: {self.prior_performance}"""
 
 class FeedbackRequest(BaseModel):
     student_data: StudentData
